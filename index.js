@@ -4,12 +4,12 @@ const cookieParser = require("cookie-parser");
 const app = express();
 const userRouter = require("./routes/users");
 const blogRouter = require("./routes/blogs");
-const likeDislikeRouter = require("./routes/likeDislike");
+// const likeDislikeRouter = require("./routes/likeDislike");
 
 app.use(express.json());
 app.use(cookieParser());
 // routes
-app.use([userRouter, blogRouter, likeDislikeRouter]);
+app.use([userRouter, blogRouter]);
 
 //landing page
 app.get("/", (req, res) => {
